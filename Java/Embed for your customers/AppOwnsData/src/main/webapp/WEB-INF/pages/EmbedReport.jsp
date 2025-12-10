@@ -71,7 +71,7 @@ Licensed under the MIT license. -->
 			// Request to get embed details
 			$.ajax({
 				type: "GET",
-				url: "/appownsdatasample/getembedinfo",
+				url: "/getembedinfo",
 				dataType: "json",
 				success: function (embedData) {
 					reportLoadConfig = {

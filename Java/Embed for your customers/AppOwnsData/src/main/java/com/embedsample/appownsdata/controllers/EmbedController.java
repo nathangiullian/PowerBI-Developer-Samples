@@ -35,15 +35,13 @@ public class EmbedController {
 
 	static final Logger logger = LoggerFactory.getLogger(EmbedController.class);
 
-	/** 
-	 * Home page controller
-	 * @return Homepage (jsp)
+	/**
+	 * Home page controller - redirects to static index.html
+	 * @return Redirect to index.html
 	 */
 	@GetMapping(path = "/")
-	public ModelAndView embedReportHome() {
-
-		// Return homepage JSP view
-		return new ModelAndView("EmbedReport");
+	public String embedReportHome() {
+		return "redirect:/index.html";
 	}
 
 	/** 

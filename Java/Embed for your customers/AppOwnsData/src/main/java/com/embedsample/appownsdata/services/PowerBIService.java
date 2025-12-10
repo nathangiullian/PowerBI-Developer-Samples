@@ -361,7 +361,33 @@ public class PowerBIService {
 		requestBody.put("datasets", jsonDatasets);
 		requestBody.put("reports", jsonReports);
 		requestBody.put("targetWorkspaces", jsonWorkspaces);
-		
+
+		// Add effective identity if configured (required for DirectQuery/Live Connection)
+		if (Config.effectiveIdentityUsername != null && !Config.effectiveIdentityUsername.isEmpty()) {
+			JSONArray identities = new JSONArray();
+			JSONObject identity = new JSONObject();
+			identity.put("username", Config.effectiveIdentityUsername);
+
+			// Add datasets to identity
+			JSONArray identityDatasets = new JSONArray();
+			for (String datasetId : datasetIds) {
+				identityDatasets.put(datasetId);
+			}
+			identity.put("datasets", identityDatasets);
+
+			// Add roles if configured
+			if (Config.effectiveIdentityRoles != null && !Config.effectiveIdentityRoles.isEmpty()) {
+				JSONArray roles = new JSONArray();
+				for (String role : Config.effectiveIdentityRoles.split(",")) {
+					roles.put(role.trim());
+				}
+				identity.put("roles", roles);
+			}
+
+			identities.put(identity);
+			requestBody.put("identities", identities);
+		}
+
 		// Add (body, header) to HTTP entity
 		HttpEntity<String> httpEntity = new HttpEntity<> (requestBody.toString(), headers);
 		

@@ -1,0 +1,46 @@
+# ============================================
+# Config file with secrets - NEVER COMMIT
+# ============================================
+src/main/java/com/embedsample/appownsdata/config/Config.java
+
+# ============================================
+# Build output
+# ============================================
+target/
+*.class
+*.jar
+*.war
+
+# ============================================
+# IDE files
+# ============================================
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+
+# ============================================
+# Logs and crash dumps
+# ============================================
+*.log
+hs_err_pid*
+
+# ============================================
+# OS files
+# ============================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================
+# Maven
+# ============================================
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
