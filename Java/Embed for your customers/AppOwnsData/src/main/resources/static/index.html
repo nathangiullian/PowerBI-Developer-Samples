@@ -66,14 +66,11 @@ Licensed under the MIT license. -->
         <section id="text-container">
             <div>
                 <p>This sample demonstrates embedding Power BI visuals using Spring Boot.</p>
-                <p>Each container below shows a different visual from the report.</p>
+                <p>Embedded Power BI visual with Row-Level Security.</p>
             </div>
         </section>
         <div style="flex: 1; display: flex; flex-wrap: wrap;">
-            <!-- Visual 1 -->
             <div id="visual-container-1" class="visual-container" style="flex: 1; min-width: 400px;"></div>
-            <!-- Visual 2 -->
-            <div id="visual-container-2" class="visual-container" style="flex: 1; min-width: 400px;"></div>
         </div>
         <section class="error-container"></section>
     </main>
@@ -96,12 +93,7 @@ Licensed under the MIT license. -->
                 {
                     containerId: "visual-container-1",
                     pageName: "c16e63727a3151412611",
-                    visualName: "788f90a6494ba18eff1a"  // Expiring Fixed Price Exceptions table
-                },
-                {
-                    containerId: "visual-container-2",
-                    pageName: "c16e63727a3151412611",
-                    visualName: "0c399b8a4831f39005a3"  // Pending Exception Requests table
+                    visualName: "0c399b8a4831f39005a3"
                 }
             ];
 
