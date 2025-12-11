@@ -5,7 +5,7 @@
 
 // ============================================================================
 // SETUP INSTRUCTIONS:
-// 1. Copy this file and rename it to Config.java (in the same folder)
+// 1. Copy this file to src/main/java/com/embedsample/appownsdata/config/Config.java
 // 2. Fill in your actual values below
 // 3. Config.java is in .gitignore and will NOT be committed
 // ============================================================================
